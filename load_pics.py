@@ -12,6 +12,7 @@ for post in posts:
     count += 1
     #L.download_post(post, "#urbanphotography")
     print(post.url)
+
     if count == 15:
         break
 
