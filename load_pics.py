@@ -6,7 +6,7 @@ L = instaloader.Instaloader()
 posts = instaloader.Hashtag.from_name(L.context, "urbanphotography").get_posts()
 
 k = 0  # initiate k
-#k_list = []  # uncomment this to tune k
+
 count = 0
 for post in posts:
     count += 1
