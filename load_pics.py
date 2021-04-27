@@ -15,21 +15,3 @@ for post in posts:
     if count == 15:
         break
 
-
-#     postdate = post.date
-#
-#     if postdate > UNTIL:
-#         continue
-#     elif postdate <= SINCE:
-#         k += 1
-#         if k == 10:
-#             break
-#         else:
-#             continue
-#     else:
-#         L.download_post(post, "#urbanphotography")
-#         # if you want to tune k, uncomment below to get your k max
-#         #k_list.append(k)
-#         k = 0  # set k to 0
-#
-# #max(k_list)

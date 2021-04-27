@@ -3,8 +3,6 @@ import logging
 from instaloader import Instaloader, Profile
 L = Instaloader()
 
-
-
 updater = Updater(token='TOKEN_HERE', use_context=True)
 dispatcher = updater.dispatcher
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
