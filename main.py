@@ -5,7 +5,7 @@ L = Instaloader()
 
 
 
-updater = Updater(token='1789505019:AAEt2BmKz9L3c2rRFazCAt119TfVEMXI30A', use_context=True)
+updater = Updater(token='TOKEN_HERE', use_context=True)
 dispatcher = updater.dispatcher
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                      level=logging.INFO)
