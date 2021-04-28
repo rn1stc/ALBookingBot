@@ -11,6 +11,7 @@ def insert_reservation(house, id, check_in_date, check_in_time, check_out_date, 
     sql = """INSERT INTO %s VALUES(%s, '%s', '%s', '%s', '%s', '%s', '%s', %s, '%s', %s) RETURNING reservation_id;"""
     conn = None
     reservation_id = None
+
     try:
         # read database configuration
         params = config()
