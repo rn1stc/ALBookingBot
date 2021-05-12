@@ -2,7 +2,7 @@ from telegram.ext import Updater, InlineQueryHandler, CommandHandler
 import logging
 from instaloader import Instaloader, Profile
 
-token_ini= open('token.ini', 'r')
+token_ini = open('token.ini', 'r')
 token = token_ini.read()
 
 L = Instaloader()
