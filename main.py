@@ -2,10 +2,12 @@ from telegram.ext import Updater, InlineQueryHandler, CommandHandler
 import logging
 from instaloader import Instaloader, Profile
 
+token_ini= open('token.ini', 'r')
+token = token_ini.read()
 
 L = Instaloader()
 
-updater = Updater(token='TOKEN_HERE', use_context=True)
+updater = Updater(token=token, use_context=True)
 dispatcher = updater.dispatcher
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                      level=logging.INFO)
