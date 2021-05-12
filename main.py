@@ -22,7 +22,6 @@ def imgs(update, context):
     count = 0
     for post in profile.get_posts():
         count += 1
-        # L.download_post(post, "#urbanphotography")
         context.bot.send_photo(chat_id=update.effective_chat.id, photo=post.url, caption=post.caption)
         if count == 5:
             break
