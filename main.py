@@ -2,10 +2,12 @@ from telegram.ext import Updater, InlineQueryHandler, CommandHandler
 import logging
 from instaloader import Instaloader, Profile
 
+token_ini = open('token.ini', 'r')
+token = token_ini.read()
 
 L = Instaloader()
 
-updater = Updater(token='TOKEN_HERE', use_context=True)
+updater = Updater(token=token, use_context=True)
 dispatcher = updater.dispatcher
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                      level=logging.INFO)
@@ -20,7 +22,6 @@ def imgs(update, context):
     count = 0
     for post in profile.get_posts():
         count += 1
-        # L.download_post(post, "#urbanphotography")
         context.bot.send_photo(chat_id=update.effective_chat.id, photo=post.url, caption=post.caption)
         if count == 5:
             break
